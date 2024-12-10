@@ -12,13 +12,11 @@ class DynamicBottomNavbar extends StatefulWidget {
 class _DynamicBottomNavbarState extends State<DynamicBottomNavbar> {
   int _currentPageIndex = 0;
 
-  // Daftar halaman yang akan ditampilkan pada navigasi
   final List<Widget> _pages = <Widget>[
     const MyHomePage(),
     const ContactList(),
   ];
 
-  // Fungsi untuk menangani perubahan tab
   void onTabTapped(int index) {
     setState(() {
       _currentPageIndex = index;

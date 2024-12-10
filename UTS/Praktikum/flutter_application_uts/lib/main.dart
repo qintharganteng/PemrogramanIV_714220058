@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget {
                   'Welcome',
                   style: TextStyle(
                     fontFamily: 'Nabla', // Menggunakan font Nabla
-                    fontSize: 36,
+                    fontSize: 45,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -62,22 +62,34 @@ class WelcomeScreen extends StatelessWidget {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color.fromARGB(255, 194, 195, 197),
+                  backgroundColor: const Color.fromARGB(
+                      255, 89, 91, 96), // Warna biru menarik
+                  foregroundColor:
+                      Colors.white, // Warna teks saat tombol ditekan
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 30,
-                    vertical: 15,
+                    horizontal: 20,
+                    vertical: 10,
                   ),
+                  elevation: 5, // Memberikan efek bayangan
+                  shadowColor: const Color.fromARGB(
+                      255, 132, 135, 139), // Warna bayangan
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(50), // Lebih melengkung
+                    side: const BorderSide(
+                      color: Color.fromARGB(
+                          255, 102, 103, 105), // Memberikan outline biru
+                      width: 1,
+                    ),
                   ),
                 ),
                 child: const Text(
-                  'Get Started',
+                  'Start',
                   style: TextStyle(
-                    fontFamily:
-                        'Domine', // Menggunakan font Domine untuk tombol
-                    fontSize: 20,
-                    color: Color.fromARGB(255, 22, 22, 22),
+                    fontFamily: 'Domine', // Font yang sama, terlihat klasik
+                    fontSize: 22, // Sedikit lebih besar untuk menonjol
+                    fontWeight: FontWeight.bold, // Membuat teks lebih mencolok
+                    letterSpacing: 1.2, // Memberikan spasi antar huruf
+                    color: Colors.white, // Warna teks putih agar kontras
                   ),
                 ),
               ),

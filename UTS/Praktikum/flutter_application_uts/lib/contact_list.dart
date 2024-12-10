@@ -28,7 +28,7 @@ class _ContactList extends State<ContactList> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Form Input',
+          'Form - Input',
           style: TextStyle(
             fontFamily: 'Nabla',
           ),
@@ -117,7 +117,7 @@ class _ContactList extends State<ContactList> {
                         String formattedDate =
                             "${pickedDate.toLocal()}".split(' ')[0];
                         setState(() {
-                          _controllerDate.text = DateFormat('yyyy-MM-dd')
+                          _controllerDate.text = DateFormat('dd-MM-yyyy')
                               .format(DateTime.parse(formattedDate));
                         });
                       }
