@@ -16,7 +16,6 @@ class _DynamicBottomNavbarState extends State<DynamicBottomNavbar> {
   final List<Widget> _pages = <Widget>[
     const MyHomePage(),
     const ContactList(),
-    const Placeholder(), // Halaman ini bisa diganti sesuai kebutuhan
   ];
 
   // Fungsi untuk menangani perubahan tab
@@ -29,8 +28,10 @@ class _DynamicBottomNavbarState extends State<DynamicBottomNavbar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[
-          _currentPageIndex], // Menampilkan halaman berdasarkan tab yang dipilih
+      body: SafeArea(
+        child: _pages[
+            _currentPageIndex], // Menampilkan halaman berdasarkan tab yang dipilih
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentPageIndex,
@@ -44,7 +45,6 @@ class _DynamicBottomNavbarState extends State<DynamicBottomNavbar> {
             icon: Icon(Icons.account_circle_rounded),
             label: 'Contact List',
           ),
-          // Tambahkan item lain jika perlu
         ],
         backgroundColor: const Color.fromARGB(255, 169, 172, 174),
         selectedItemColor: const Color.fromARGB(255, 3, 3, 3),
