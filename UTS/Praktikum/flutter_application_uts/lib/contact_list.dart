@@ -164,6 +164,7 @@ class _ContactList extends State<ContactList> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+
                 SizedBox(
                   child: SingleChildScrollView(
                     child: Column(
@@ -349,6 +350,22 @@ class _ContactList extends State<ContactList> {
     if (value == null || value.isEmpty) {
       return 'Nomor telepon harus diisi';
     }
+
+    // Only number
+    if (!RegExp(r'^\d+$').hasMatch(value)) {
+      return 'Nomor telepon harus terdiri dari angka saja';
+    }
+
+    // 8-13 digit
+    if (value.length < 8 || value.length > 13) {
+      return 'Nomor telepon harus memiliki panjang antara 8 hingga 13 digit';
+    }
+
+    // "62"
+    if (!value.startsWith('62')) {
+      return 'Nomor telepon harus dimulai dengan angka 62';
+    }
+
     return null;
   }
 

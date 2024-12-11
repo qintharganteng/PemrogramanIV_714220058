@@ -98,6 +98,13 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const Text(
+                        '714220058',
+                        style: TextStyle(
+                          fontFamily: 'Domine',
+                          color: Colors.white,
+                        ),
+                      ),
                       const SizedBox(height: 16),
                     ],
                   ),
